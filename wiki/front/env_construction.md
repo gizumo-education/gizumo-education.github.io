@@ -25,11 +25,9 @@ git config --global --list
 
 ## ツールのインストール
 
-下記3つを順番にインストールしていきます。
+下記をインストールしていきます。
 
 - Homebrew(Macの方のみ)
-- Volta
-- Node.js
 
 ### Homebrew
 ※Windowsの方はHomebrewの設定は飛ばして、Voltaの設定に進んでください。  
@@ -74,91 +72,4 @@ brew -v
 
 Homebrew 3.5.9
 Homebrew/homebrew-core (git revision d1409ew; last commit 2022-08-22)
-```
-
-### Volta
-次にNode.jsやnpmのバージョンを管理してくれるVoltaをインストールします。  
-VoltaもHomebrewで扱うことのできるパッケージなので、Homebrewを使用してインストールしていきます。(Windowsの方はPCに直接インストールします。)
-
-#### Macの方
-##### 1. インストールと確認
-ターミナルで下記のコマンドを実行してください。
-
-```shell
-brew install volta
-```
-
-インストールが完了したら下記のコマンドを実行し、バージョンが表示されれば問題ありません。
-```shell
-volta -v
-
-1.0.8
-```
-
-##### 2. 環境変数の設定
-下記コマンドを実行してエラーなく処理が完了すれば問題ありません。
-
-```shell
-volta setup
-```
-
-##### 3. SHELLの再起動
-
-```shell
-exec $SHELL -l
-```
-
-##### 4. Nodeのインストールと確認
-
-```shell
-volta install node
-```
-
-下記コマンドを実行してバージョンが表示されれば完了です。
-
-```shell
-node -v
-
-v16.17.0
-```
-
-#### Windowsの方
-
-##### 1. 開発者モードをONにする
-Voltaを使用するには、開発者モードをONに設定する必要があるので、下記手順で開発者モードをONにしてください。
-
-1. 検索ボックスに「開発者」と入力し「開発者向け機能を使う」を起動
-2. 開発者モードをONに変更
-
-![開発者向け機能設定画面](https://res.cloudinary.com/gizumo-inc/image/upload/v1661313309/curriculums/Sass%20Lesson/developer_mode.png)
-
-##### 2. Voltaのインストール
-[Volta公式サイトのGetting Started](https://docs.volta.sh/guide/getting-started)から「download and run the Windows installer」のリンクをクリックし、インストーラーをダウンロードします。
-
-![Volta公式サイトのインストーラーダウンロード画面](https://res.cloudinary.com/gizumo-inc/image/upload/v1661313322/curriculums/Sass%20Lesson/volta_installer.png)
-
-ダウンロードしたインストーラーを起動したら、全て「Next」をクリックし、最後のページで「Install」をクリックしてください。
-
-![Voltaインストール確認画面](https://res.cloudinary.com/gizumo-inc/image/upload/v1661313317/curriculums/Sass%20Lesson/volta_install.png)
-
-インストールが完了したらコマンドラインを起動し、下記コマンドを実行してバージョンが表示されればVoltaのインストールは完了です。
-
-```shell
-volta -v
-
-1.0.8
-```
-
-##### 3. Nodeのインストールと確認
-
-```shell
-volta install node
-```
-
-下記コマンドを実行してバージョンが表示されれば完了です。
-
-```shell
-node -v
-
-v16.17.0
 ```
